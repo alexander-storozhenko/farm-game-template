@@ -1,0 +1,22 @@
+{
+  "frames": {
+    "obj_0": {
+      "frame": { "x": 0,   "y": 0,   "w": 172, "h": 49 },
+      "meta": {
+        "scale": 1,
+        "anchor": 0.5
+      }
+    },
+    "obj_1": {
+      "frame": { "x": 172,   "y": 0,   "w": 124, "h": 160 },
+      "meta": {
+        "scale": 1,
+        "anchor": [0.5, 1]
+      }
+    }
+  },
+  "meta": {
+    "image": "objects.png",
+    "size": { "w": 296, "h": 160 }
+  }
+}
