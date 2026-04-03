@@ -1,5 +1,6 @@
 import {DynamicObject} from "@/game/core/logic/dynamicObjects/base";
-import {drawObjects} from "@/game/core/logic/grid/objects";
+import {drawBlizzard} from "@/game/core/logic/effects/snow";
+import {drawBg, drawObjects} from "@/game/core/logic/grid/objects";
 import {addGridDebugOverlayListener, drawSpriteGrid, loadGridJson} from "@/game/core/logic/grid/utils";
 import {Container, Graphics, Sprite} from "pixi.js";
 
@@ -62,6 +63,8 @@ export const initializeGrid = async () => {
     // gridContainer.position.x -= 40
     // gridContainer.position.y += 40
 
+    // drawBlizzard()
+    // drawBg()
     drawSpriteGrid(json.grid)
     drawObjects(json.objects)
 

@@ -1,4 +1,5 @@
 import {cameraContainer, globalContainer} from "@/game/core/global";
+import {House} from "@/game/core/logic/dynamicObjects/House";
 import {Tree} from "@/game/core/logic/dynamicObjects/Tree";
 import {
     CELL_STATUSES,
@@ -14,21 +15,14 @@ import {Sprite, Texture} from "pixi.js";
 
 const OBJECT_TYPES = {
     'tree_1': Tree,
+    'house_1': House,
     'plant_1': Tree,
 }
 
 // ======================================================
 // =================== PUBLIC ===========================
 // ======================================================
-
-/**
- * Draws static objects (decorations/buildings) defined in the objects map.
- *
- * @param {StaticObjectDef[]} map - Array of object definitions.
- */
-export function drawObjects(map: StaticObjectDef[]): void {
-
-    // TODO move bg =======================
+export function drawBg() {
     const bg = getTexture('bg', 'bg_0')
     const bgS = new Sprite(bg)
     // bgS.anchor.set(0.5, 1)
@@ -37,8 +31,14 @@ export function drawObjects(map: StaticObjectDef[]): void {
     bgS.scale.set(0.5, 0.5)
     bgS._zIndex = -1
     cameraContainer.addChild(bgS)
+}
 
-
+/**
+ * Draws static objects (decorations/buildings) defined in the objects map.
+ *
+ * @param {StaticObjectDef[]} map - Array of object definitions.
+ */
+export function drawObjects(map: StaticObjectDef[]): void {
     map.forEach((o) => {
         const cellsBuffer: GridCell[] = [];
         o.cells.forEach((c) => cellsBuffer.push(getCellById(c.i, c.j)));

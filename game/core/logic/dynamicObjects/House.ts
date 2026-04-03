@@ -2,7 +2,7 @@ import {DynamicObject} from "@/game/core/logic/dynamicObjects/base";
 import {Sprite} from "pixi.js";
 import { gsap } from "gsap";
 
-export class Tree extends DynamicObject {
+export class House extends DynamicObject {
     constructor(sprite: Sprite) {
         super(sprite);
         this.initialize()
@@ -22,7 +22,7 @@ export class Tree extends DynamicObject {
         });
 
         this.sprite.on("mousedown" as any, () => {
-            alert("CLICK ON TREE")
+            alert("CLICK ON HOUSE")
         });
     }
 }

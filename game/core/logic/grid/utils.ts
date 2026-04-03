@@ -45,10 +45,14 @@ export function setCells(
             // cell.tile.tint = 0xcaffca;
 
         }
-        else {
+        else if (status === CELL_STATUSES.STATIC) {
             cell.tile.tint = 0xcaffca;
             if(SELECTED_CELL_GRAPHICS)
-            SELECTED_CELL_GRAPHICS.alpha = 0
+                SELECTED_CELL_GRAPHICS.alpha = 0
+        } else {
+            cell.tile.tint = 0xFFFFFF;
+            if(SELECTED_CELL_GRAPHICS)
+                SELECTED_CELL_GRAPHICS.alpha = 0
         }
 
         if (status !== CELL_STATUSES.SELECTED) {
