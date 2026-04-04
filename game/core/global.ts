@@ -11,7 +11,7 @@ export const CANVAS_WIDTH = 1700
 export const CANVAS_HEIGHT = 900
 
 export const CAMERA_SPEED = 25
-export const DEFAULT_FONT_FAMILY  = 'Ubuntu'
+export const DEFAULT_FONT_FAMILY  = 'sans-serif'
 
 export const TMP_CELLS_SELECT_AREA_W = 1
 export const TMP_CELLS_SELECT_AREA_H = 1

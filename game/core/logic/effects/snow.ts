@@ -121,7 +121,7 @@ export function drawBlizzard() {
     const fullscreenRect = new Graphics();
     fullscreenRect
         .rect(0, 0, app.renderer.width, app.renderer.height)
-        .fill(0xffffff, 0); // цвет не важен, всё перекроет шейдер
+        .fill(0xffffff, 0);
     shaderContainer.addChild(fullscreenRect);
     shaderContainer.filters = [snowFilter];
     const uniforms = snowFilter.resources.snowUniforms.uniforms;
